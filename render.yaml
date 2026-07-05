@@ -3,15 +3,27 @@ services:
     name: brand-identity-api
     env: node
     plan: free
-    buildCommand: "npm install && npm run build"
-    startCommand: "npm start"
+
+    buildCommand: |
+      curl -fsSL https://get.pnpm.io/install.sh | sh -
+      pnpm install
+      pnpm run build
+
+    startCommand: pnpm start
     autoDeploy: true
+
     envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
       - key: OPENAI_API_KEY
         sync: false
       - key: OPENAI_BASE_URL
         value: https://api.openai.com/v1
-      - key: NODE_ENV
-        value: production
-      - key: PORT
-        value: 10000
+      - key: API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
