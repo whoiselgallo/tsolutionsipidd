@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1782622909240,
+      "tag": "0000_rainy_vector",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1782623049346,
+      "tag": "0001_tired_tarot",
+      "breakpoints": true
+    }
+  ]
+}
